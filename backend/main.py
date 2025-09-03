@@ -116,7 +116,8 @@ def get_db():
 # ------------ Exception handler for auth errors ------------
 @app.exception_handler(AuthJWTException)
 def authjwt_exception_handler(request, exc):
-    return HTTPException(status_code=exc.status_code, detail=exc.message)
+    raise HTTPException(status_code=exc.status_code, detail=exc.message)
+
 
 # ------------ AUTH endpoints ------------
 @app.post("/auth/register", response_model=UserOut)
