@@ -95,7 +95,8 @@ app = FastAPI(title="Notes App (FastAPI + JWT)")
 
 # allow React dev server origin
 origins = [
-    "http://localhost:3000",
+
+    "https://notes-app-umber-mu.vercel.app",
 ]
 app.add_middleware(
     CORSMiddleware,
