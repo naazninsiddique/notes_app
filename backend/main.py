@@ -98,9 +98,11 @@ origins = [
     "https://notes-app-umber-mu.vercel.app/",  # exact frontend URL
     "http://localhost:3000"  # optional, dev testing
 ]
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["https://notes-app-umber-mu.vercel.app"],  # frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
