@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API = "http://127.0.0.1:8000";
+const API = "https://notes-app-mma1.onrender.com";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -104,7 +104,7 @@ function App() {
   return (
     <div className="app-container">
       <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-        <h1>Notes App 📝</h1>
+        <h1>Notes App </h1>
         <div>
           <span style={{marginRight:10}}>Logged in as {email}</span>
           <button onClick={logout}>Logout</button>
