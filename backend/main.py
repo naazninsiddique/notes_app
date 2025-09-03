@@ -95,7 +95,7 @@ app = FastAPI(title="Notes App (FastAPI + JWT)")
 
 # allow React dev server origin
 origins = [
-    "https://<your-vercel-app-url>.vercel.app",  # exact frontend URL
+    "https://notes-app-umber-mu.vercel.app/",  # exact frontend URL
     "http://localhost:3000"  # optional, dev testing
 ]
 app.add_middleware(
